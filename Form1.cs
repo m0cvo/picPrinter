@@ -2,6 +2,9 @@ using System.Drawing.Printing;
 
 namespace picPrinter
 {
+    /// <summary>
+    /// An app to load a picture from file (HD, USB, etc.) and then send it to local printer.
+    /// </summary>
     public partial class Form1 : Form
     {
         public Form1()
@@ -33,6 +36,8 @@ namespace picPrinter
         {
             CaptureScreen();
         }
+
+        //CaptureScreen is where all the work takes place for sending the image to the local printer.
         private void CaptureScreen()
         {
             PrintDocument pDoc = new PrintDocument();
