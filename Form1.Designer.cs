@@ -80,9 +80,12 @@
             this.PrintBtn.TabIndex = 3;
             this.PrintBtn.Text = "Print";
             this.PrintBtn.UseVisualStyleBackColor = true;
+            this.PrintBtn.Click += new System.EventHandler(this.PrintBtn_Click);
             // 
             // printDialog1
             // 
+            this.printDialog1.AllowCurrentPage = true;
+            this.printDialog1.ShowHelp = true;
             this.printDialog1.UseEXDialog = true;
             // 
             // Form1
