@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AddPicture = new System.Windows.Forms.OpenFileDialog();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.LoadBtn = new System.Windows.Forms.Button();
             this.PrintBtn = new System.Windows.Forms.Button();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
+            this.clearBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,7 +66,7 @@
             // 
             // LoadBtn
             // 
-            this.LoadBtn.Location = new System.Drawing.Point(585, 384);
+            this.LoadBtn.Location = new System.Drawing.Point(434, 384);
             this.LoadBtn.Name = "LoadBtn";
             this.LoadBtn.Size = new System.Drawing.Size(75, 23);
             this.LoadBtn.TabIndex = 2;
@@ -74,7 +76,7 @@
             // 
             // PrintBtn
             // 
-            this.PrintBtn.Location = new System.Drawing.Point(490, 384);
+            this.PrintBtn.Location = new System.Drawing.Point(596, 384);
             this.PrintBtn.Name = "PrintBtn";
             this.PrintBtn.Size = new System.Drawing.Size(75, 23);
             this.PrintBtn.TabIndex = 3;
@@ -88,17 +90,29 @@
             this.printDialog1.ShowHelp = true;
             this.printDialog1.UseEXDialog = true;
             // 
+            // clearBtn
+            // 
+            this.clearBtn.Location = new System.Drawing.Point(515, 384);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(75, 23);
+            this.clearBtn.TabIndex = 4;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.PrintBtn);
             this.Controls.Add(this.LoadBtn);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "PicPrinter";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -112,5 +126,6 @@
         private Button LoadBtn;
         private Button PrintBtn;
         private PrintDialog printDialog1;
+        private Button clearBtn;
     }
 }

@@ -59,6 +59,11 @@ namespace picPrinter
             System.Drawing.Image img = pictureBox1.Image;
             Point loc = new Point(10, 10);
             e.Graphics.DrawImage(img, loc);
-        }        
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = null;
+        }
     }
 }
