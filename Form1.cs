@@ -52,6 +52,7 @@ namespace picPrinter
             {
                 pDoc.Print();
             };
+            pDoc.Dispose();
         }
 
         private void PrintPage(object o, PrintPageEventArgs e)
